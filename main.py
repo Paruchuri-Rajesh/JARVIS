@@ -9,10 +9,10 @@ from gtts import gTTS
 import pygame 
 import os
 
-elevenlabs_api="sk_31896702c2d84c40606b188394dc26fd51e35807bfc75210"
+
 
 engine=pyttsx3.init()
-newsapi="a6fdf9917aa94119bd0687fbe80bd3eb"
+newsapi="your newsapi key"
 searchlink="https://www.google.com/search?q={}}&rlz=1C1CHBF_enIN1016IN1016&oq=apple+10+pro+max&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDYwOTNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
 
 def speak_old(text):
@@ -34,8 +34,7 @@ def speak(text):
 
 def aiprocess(c):
     client = OpenAI(
-    api_key="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")
-
+    api_key="your_openai_Apikey")
     completion = client.chat.completions.create(
     model="gpt-4o",
     messages=[
